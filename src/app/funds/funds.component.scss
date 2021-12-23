@@ -1,0 +1,60 @@
+.main-container {
+  width: 50%;
+  margin-left: 20vw;
+}
+
+// .nav-bar {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   button {
+//     display: flex;
+//     flex-direction: row;
+//   }
+// }
+
+button {
+  all: unset;
+  cursor: pointer;
+  color: black;
+  opacity: 0.5;
+  font-size: 14pt;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
+button:focus {
+  font-weight: bold;
+  opacity: 1;
+  outline: rgba(0, 0, 255, 0.7) 2px solid;
+  text-decoration: underline;
+  border-bottom: rgb(175, 20, 20) solid 5px;
+}
+
+table {
+  width: 70vw;
+  th {
+    text-align: left;
+    width: 6vw;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: rgb(218, 218, 218, 0.25);
+    border-top: 1px solid rgb(0, 0, 0, 0.25);
+    font-weight: normal;
+  }
+  tr {
+    text-align: left;
+    width: 6vw;
+    border-bottom: 1px solid rgb(138, 137, 137);
+  }
+  td {
+    padding: 20px 20px;
+    border-bottom: 1px solid rgb(138, 137, 137, 0.15);
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

@@ -1,0 +1,38 @@
+<form #fundForm="ngForm" (ngSubmit)="registerFund(fundForm)">
+  <label for="name">name:</label><br>
+  <input type="text" id="name" name="name" ngModel><br>
+  <label for="ticker">ticker:</label>
+  <input type="text" id="ticker" name="ticker" ngModel><br>
+  <label for="assetClass">assetClass:</label>
+  <input type="text" id="assetClass" name="assetClass" ngModel><br>
+  <label for="expenseRatio">expenseRatio:</label>
+  <input type="text" id="expenseRatio" name="expenseRatio" ngModel><br>
+  <label for="price">price:</label>
+  <input type="text" id="price" name="price" ngModel><br>
+  <label for="priceChange">priceChange:</label>
+  <input type="text" id="priceChange" name="priceChange" ngModel><br>
+  <label for="ytd">ytd:</label>
+  <input type="text" id="ytd" name="ytd" ngModel><br>
+  <label for="oneyr">oneyr:</label>
+  <input type="text" id="oneyr" name="oneyr" ngModel><br>
+  <label for="fiveyr">fiveyr:</label>
+  <input type="text" id="fiveyr" name="fiveyr" ngModel>
+  <label for="tenyr">tenyr:</label>
+  <input type="text" id="tenyr" name="tenyr" ngModel>
+  <label for="sinceInception">sinceInception:</label>
+  <input type="text" id="sinceInception" name="sinceInception" ngModel>
+  <button type="submit">Register</button>
+</form>
+
+
+<!-- name?: string,
+ticker?: string,
+assetClass?: string,
+expenseRatio?: string,
+price?: string,
+priceChange?: string,
+ytd?: string,
+oneyr?: string,
+fiveyr?: string,
+tenyr?: string,
+sinceInception?: string, -->

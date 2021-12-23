@@ -1,0 +1,81 @@
+<div class="main-container">
+
+<!-- <div class="nav-bar" *ngFor="let nav of arrSwitch">
+  <button (click)="switchNav(nav)">{{nav}}</button>
+</div> -->
+
+<button (click)="switchNav('Overview')">Overview</button><button (click)="switchNav('Performance')">Performance</button><button (click)="switchNav('Price')">Price</button>
+
+<div>
+  <!-- <form #fundForm="ngForm" (ngSubmit)="registerFund(fundForm)">
+    <label for="name">name:</label><br>
+    <input type="text" id="name" name="name" ngModel><br>
+    <label for="ticker">ticker:</label>
+    <input type="text" id="ticker" name="ticker" ngModel><br>
+    <label for="assetClass">assetClass:</label>
+    <input type="text" id="assetClass" name="assetClass" ngModel><br>
+    <label for="expenseRatio">expenseRatio:</label>
+    <input type="text" id="expenseRatio" name="expenseRatio" ngModel><br>
+    <label for="price">price:</label>
+    <input type="text" id="price" name="price" ngModel><br>
+    <label for="priceChange">priceChange:</label>
+    <input type="text" id="priceChange" name="priceChange" ngModel><br>
+    <label for="ytd">ytd:</label>
+    <input type="text" id="ytd" name="ytd" ngModel><br>
+    <label for="oneyr">oneyr:</label>
+    <input type="text" id="oneyr" name="oneyr" ngModel><br>
+    <label for="fiveyr">fiveyr:</label>
+    <input type="text" id="fiveyr" name="fiveyr" ngModel>
+    <label for="tenyr">tenyr:</label>
+    <input type="text" id="tenyr" name="tenyr" ngModel>
+    <label for="sinceInception">sinceInception:</label>
+    <input type="text" id="sinceInception" name="sinceInception" ngModel>
+    <button type="submit">Register</button>
+  </form> -->
+  <table *ngIf="overview">
+    <tr>
+      <th>Ticker | Fund name</th>
+      <th>Asset class</th>
+      <th>Expense ratio</th>
+    </tr>
+    <tr *ngFor="let fund of funds">
+      <td><a [routerLink]="['/fund/',fund.id]">{{fund.ticker}}<br />{{fund.name}}</a></td>
+      <td>{{fund.assetClass}}</td>
+      <td>{{fund.expenseRatio}}</td>
+    </tr>
+  </table>
+
+  <table *ngIf="performance">
+    <tr>
+      <th>Ticker | Fund name</th>
+      <th>YTD</th>
+      <th>1-yr</th>
+      <th>5-yr</th>
+      <th>10-yr</th>
+      <th>Since inception</th>
+    </tr>
+    <tr *ngFor="let fund of funds">
+      <td><a [routerLink]="['/fund/',fund.id]">{{fund.ticker}}<br />{{fund.name}}</a></td>
+      <td>{{fund.ytd}}</td>
+      <td>{{fund.oneyr}}</td>
+      <td>{{fund.fiveyr}}</td>
+      <td>{{fund.tenyr}}</td>
+      <td>{{fund.sinceInception}}</td>
+    </tr>
+  </table>
+
+  <table *ngIf="price">
+    <tr>
+      <th>Ticker | Fund name</th>
+      <th>Price</th>
+      <th>Change Price</th>
+    </tr>
+    <tr *ngFor="let fund of funds">
+      <td><a [routerLink]="['/fund/',fund.id]">{{fund.ticker}}<br />{{fund.name}}</a></td>
+      <td>{{fund.price}}</td>
+      <td>{{fund.priceChange}}</td>
+    </tr>
+  </table>
+</div>
+
+</div>

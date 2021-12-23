@@ -1,0 +1,13 @@
+<input [(ngModel)]="fund.name" (ngModelChange)="fund.name=$event" />
+<input [(ngModel)]="fund.ticker" (ngModelChange)="fund.ticker" />
+<input [(ngModel)]="fund.assetClass" (ngModelChange)="fund.assetClass" />
+<input [(ngModel)]="fund.expenseRatio" (ngModelChange)="fund.expenseRatio" />
+<input [(ngModel)]="fund.price" (ngModelChange)="fund.price" />
+<input [(ngModel)]="fund.priceChange" (ngModelChange)="fund.priceChange" />
+<input [(ngModel)]="fund.ytd" (ngModelChange)="fund.ytd" />
+<input [(ngModel)]="fund.oneyr" (ngModelChange)="fund.oneyr" />
+<input [(ngModel)]="fund.fiveyr" (ngModelChange)="fund.fiveyr" />
+<input [(ngModel)]="fund.tenyr" (ngModelChange)="fund.tenyr" />
+<input [(ngModel)]="fund.sinceInception" (ngModelChange)="fund.sinceInception" />
+
+<button (click)="fundChange()">CHANGE</button>
