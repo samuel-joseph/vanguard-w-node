@@ -1,17 +1,47 @@
-<div>
-  <div>{{fund.name}}</div>
-  <div>{{fund.ticker}}</div>
-  <div>{{fund.assetClass}}</div>
-  <div>{{fund.expenseRatio}}</div>
-  <div>{{fund.price}}</div>
-  <div>{{fund.priceChange}}</div>
-  <div>{{fund.ytd}}</div>
-  <div>{{fund.oneyr}}</div>
-  <div>{{fund.fiveyr}}</div>
-  <div>{{fund.tenyr}}</div>
-  <div>{{fund.sinceInception}}</div>
-  <button (click)="toEdit()">Edit</button>
-  <button (click)="toDelete()">Delete Fund</button>
+<div class="base-container">
+  <div class="sub-container">
+  <div>Name</div><div>{{fund.name}}</div>
+  </div>
+  <div class="sub-container">
+  <div>Ticker</div><div>{{fund.ticker}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>Asset Class</div><div>{{fund.assetClass}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>Expense Ratio</div><div>{{fund.expenseRatio}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>Price</div><div>{{fund.price}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>Price Change</div><div>{{fund.priceChange}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>YTD</div><div>{{fund.ytd}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>One Year</div><div>{{fund.oneyr}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>Five Year</div><div>{{fund.fiveyr}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>Ten Year</div><div>{{fund.tenyr}}</div>
+  </div>
+
+  <div class="sub-container">
+  <div>Since Inception</div><div>{{fund.sinceInception}}</div>
+  </div>
 </div>
+
 
 

@@ -4,44 +4,46 @@
   <button (click)="switchNav(nav)">{{nav}}</button>
 </div> -->
 
-<button (click)="switchNav('Overview')">Overview</button><button (click)="switchNav('Performance')">Performance</button><button (click)="switchNav('Price')">Price</button>
 
-<div>
-  <!-- <form #fundForm="ngForm" (ngSubmit)="registerFund(fundForm)">
-    <label for="name">name:</label><br>
-    <input type="text" id="name" name="name" ngModel><br>
-    <label for="ticker">ticker:</label>
-    <input type="text" id="ticker" name="ticker" ngModel><br>
-    <label for="assetClass">assetClass:</label>
-    <input type="text" id="assetClass" name="assetClass" ngModel><br>
-    <label for="expenseRatio">expenseRatio:</label>
-    <input type="text" id="expenseRatio" name="expenseRatio" ngModel><br>
-    <label for="price">price:</label>
-    <input type="text" id="price" name="price" ngModel><br>
-    <label for="priceChange">priceChange:</label>
-    <input type="text" id="priceChange" name="priceChange" ngModel><br>
-    <label for="ytd">ytd:</label>
-    <input type="text" id="ytd" name="ytd" ngModel><br>
-    <label for="oneyr">oneyr:</label>
-    <input type="text" id="oneyr" name="oneyr" ngModel><br>
-    <label for="fiveyr">fiveyr:</label>
-    <input type="text" id="fiveyr" name="fiveyr" ngModel>
-    <label for="tenyr">tenyr:</label>
-    <input type="text" id="tenyr" name="tenyr" ngModel>
-    <label for="sinceInception">sinceInception:</label>
-    <input type="text" id="sinceInception" name="sinceInception" ngModel>
-    <button type="submit">Register</button>
-  </form> -->
+
+
+<div class="main-display">
+  
+  <form class="form-container" #fundForm="ngForm" (ngSubmit)="registerFund(fundForm)">
+    <h4>Add Funds:</h4>
+    <input type="text" id="name" name="name" ngModel placeholder="Name"><br>
+    <input type="text" id="ticker" name="ticker" ngModel placeholder="Ticker"><br>
+    <input type="text" id="assetClass" name="assetClass" ngModel placeholder="Asset Class"><br>
+    <input type="text" id="expenseRatio" name="expenseRatio" ngModel placeholder="Expense Ratio"><br>
+    <input type="text" id="price" name="price" ngModel placeholder="Price"><br>
+    <input type="text" id="priceChange" name="priceChange" ngModel placeholder="Price Change"><br>
+    <input type="text" id="ytd" name="ytd" ngModel placeholder="YTD"><br>
+    <input type="text" id="oneyr" name="oneyr" ngModel placeholder="One Year"><br>
+    <input type="text" id="fiveyr" name="fiveyr" ngModel placeholder="Five Year"><br>
+    <input type="text" id="tenyr" name="tenyr" ngModel placeholder="Ten Year"><br>
+    <input type="text" id="sinceInception" name="sinceInception" ngModel placeholder="Since Inception"><br>
+    <div class="button-wrapper">
+      <button type="submit">Register</button>
+    </div>
+  </form>
+  <div>
+    <button (click)="switchNav('Overview')">Overview</button><button (click)="switchNav('Performance')">Performance</button><button (click)="switchNav('Price')">Price</button>
   <table *ngIf="overview">
     <tr>
       <th>Ticker | Fund name</th>
       <th>Asset class</th>
       <th>Expense ratio</th>
+      <th>Remove</th>
     </tr>
     <tr *ngFor="let fund of funds">
-      <td><a [routerLink]="['/fund/',fund.id]">{{fund.ticker}}<br />{{fund.name}}</a></td>
+      <td><a [routerLink]="['/fund/'+fund.id+'/edit']">{{fund.ticker}}<br />{{fund.name}}</a></td>
       <td>{{fund.assetClass}}</td>
       <td>{{fund.expenseRatio}}</td>
+      <td>
+        <div (click)="toDelete(fund.id)">
+          <img alt="trash" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4r68Sv4kY8f3-1d2nkElFVQ8uhi4QPnRjcriPlPqpUpqZfpGzRthctK1G2EpZ_rmp6AU&usqp=CAU" 
+          />
+        </div></td>
     </tr>
   </table>
 
@@ -76,6 +78,7 @@
       <td>{{fund.priceChange}}</td>
     </tr>
   </table>
+</div>
 </div>
 
 </div>

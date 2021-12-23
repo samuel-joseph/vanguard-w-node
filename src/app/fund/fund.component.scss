@@ -1,0 +1,21 @@
+.base-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45vw;
+  padding: 5vh 5vw;
+  font-size: 12pt;
+  border: 5px solid maroon;
+  background-color: rgb(138, 137, 137, 0.25);
+  font-weight: bold;
+  margin-left: 200px;
+  border-radius: 20px;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(138, 137, 137);
+  padding: 10px 0;
+}

@@ -1,17 +1,14 @@
 .main-container {
   width: 50%;
-  margin-left: 20vw;
 }
 
-// .nav-bar {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   button {
-//     display: flex;
-//     flex-direction: row;
-//   }
-// }
+.main-display {
+  // border: 2px solid red;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 button {
   all: unset;
@@ -24,6 +21,36 @@ button {
   padding-top: 5px;
 }
 
+h4 {
+  font-size: 14pt;
+  padding-left: 10px;
+}
+
+.form-container {
+  width: 30vw;
+
+  input {
+    width: 80%;
+    padding: 20px 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(138, 137, 137);
+  }
+
+  .button-wrapper {
+    padding-top: 25px;
+  }
+  button {
+    padding: 10px 30px;
+    color: white;
+    font-weight: bolder;
+    background-color: maroon;
+    opacity: 1;
+    border-radius: 20px;
+  }
+}
+
 button:focus {
   font-weight: bold;
   opacity: 1;
@@ -33,7 +60,7 @@ button:focus {
 }
 
 table {
-  width: 70vw;
+  width: 68vw;
   th {
     text-align: left;
     width: 6vw;
@@ -57,4 +84,8 @@ table {
     text-decoration: none;
     color: black;
   }
+}
+
+img {
+  width: 15%;
 }

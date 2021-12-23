@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ConfigService } from '../config.service';
-import { ActivatedRoute } from '@angular/router';
+
+import { ActivatedRoute, Router } from '@angular/router';
 import { Fund } from "../../app/fund/fund.model";
 
 @Component({
@@ -14,7 +14,7 @@ export class EditfundComponent implements OnInit {
   fund: Fund = {}
   index: any;
 
-  constructor(private config: ConfigService, private route:ActivatedRoute) { }
+  constructor(private config: ConfigService, private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -26,9 +26,8 @@ export class EditfundComponent implements OnInit {
   }
 
   fundChange() {
-    console.log(this.fund)
     this.config.editFund(this.index, this.fund).subscribe(response => {
-      console.log(response);
+      this.router.navigateByUrl(`/fund/${this.fund.id}`);
     })
   }
 

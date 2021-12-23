@@ -1,13 +1,41 @@
-<input [(ngModel)]="fund.name" (ngModelChange)="fund.name=$event" />
-<input [(ngModel)]="fund.ticker" (ngModelChange)="fund.ticker" />
-<input [(ngModel)]="fund.assetClass" (ngModelChange)="fund.assetClass" />
-<input [(ngModel)]="fund.expenseRatio" (ngModelChange)="fund.expenseRatio" />
-<input [(ngModel)]="fund.price" (ngModelChange)="fund.price" />
-<input [(ngModel)]="fund.priceChange" (ngModelChange)="fund.priceChange" />
-<input [(ngModel)]="fund.ytd" (ngModelChange)="fund.ytd" />
-<input [(ngModel)]="fund.oneyr" (ngModelChange)="fund.oneyr" />
-<input [(ngModel)]="fund.fiveyr" (ngModelChange)="fund.fiveyr" />
-<input [(ngModel)]="fund.tenyr" (ngModelChange)="fund.tenyr" />
-<input [(ngModel)]="fund.sinceInception" (ngModelChange)="fund.sinceInception" />
+<div class="main-container">
+  <h2>Manage Fund</h2>
+  <div class="sub-container">
+    <div>Name</div><input [(ngModel)]="fund.name" (ngModelChange)="fund.name=$event" />
+  </div>
+  <div class="sub-container">
+    <div>Ticker</div><input [(ngModel)]="fund.ticker" (ngModelChange)="fund.ticker" />
+  </div>
+  <div class="sub-container">
+    <div>Asset Class</div><input [(ngModel)]="fund.assetClass" (ngModelChange)="fund.assetClass" />
+  </div>
+  <div class="sub-container">
+    <div>Expense Ratio</div><input [(ngModel)]="fund.expenseRatio" (ngModelChange)="fund.expenseRatio" />
+  </div>
+  <div class="sub-container">
+    <div>Price</div><input [(ngModel)]="fund.price" (ngModelChange)="fund.price" />
+  </div>
+  <div class="sub-container">
+    <div>Price Change</div><input [(ngModel)]="fund.priceChange" (ngModelChange)="fund.priceChange" />
+  </div>
+  <div class="sub-container">
+    <div>YTD</div><input [(ngModel)]="fund.ytd" (ngModelChange)="fund.ytd" />
+  </div>
+  <div class="sub-container">
+    <div>One Year</div><input [(ngModel)]="fund.oneyr" (ngModelChange)="fund.oneyr" />
+  </div>
+  <div class="sub-container">
+    <div>Five Year</div><input [(ngModel)]="fund.fiveyr" (ngModelChange)="fund.fiveyr" />
+  </div>
+  <div class="sub-container">
+    <div>Ten Year</div><input [(ngModel)]="fund.tenyr" (ngModelChange)="fund.tenyr" />
+  </div>
+  <div class="sub-container">
+    <div>Since Inception</div><input [(ngModel)]="fund.sinceInception" (ngModelChange)="fund.sinceInception" />
+  </div>
+  <div class="button-holder">
+    <button (click)="fundChange()">Save changes </button>
+</div>
+</div>
 
-<button (click)="fundChange()">CHANGE</button>
+
